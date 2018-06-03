@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Starter Template for Bootstrap</title>
+    <!-- BS core css-->
+    <link rel="stylesheet" href="">
+</head>
+<body>
+{% for blog in  blog_list%}
+<h2 id="demo">{{ blog.title }}</h2>
+    <h3>{{ blog.timestamp }}</h3>
+    <p>
+    {{ blog.body }}
+    </p>
+{% endfor %}
+<h2 align="center">
+	<script>
+		function myFunction() {
+			var x=document.getElementById("demo");
+			aler
+        }
+	</script>
+</h2>
+</body>
+</html>
