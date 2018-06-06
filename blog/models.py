@@ -7,3 +7,10 @@ class BlogPost(models.Model):
     title = models.CharField(max_length=50)
     body = models.TextField()
     timestamp = models.DateTimeField()
+
+
+class DiaryPost(models.Model):
+    title = models.CharField(max_length=30)
+    participants = models.CharField(max_length=50)
+    body = models.TextField()
+    timestamp = models.DateTimeField()

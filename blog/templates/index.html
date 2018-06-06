@@ -10,19 +10,14 @@
 </head>
 <body>
 {% for blog in  blog_list%}
-<h2 id="demo">{{ blog.title }}</h2>
-    <h3>{{ blog.timestamp }}</h3>
+<h2 id="demo">{{ blog.title | title }}</h2>
+    <h3>{{ blog.timestamp | time }}</h3>
     <p>
-    {{ blog.body }}
+    {{ blog.body  }}
     </p>
 {% endfor %}
-<h2 align="center">
-	<script>
-		function myFunction() {
-			var x=document.getElementById("demo");
-			aler
-        }
-	</script>
+<h2 align="center" name="end">
+    -----End-----
 </h2>
 </body>
 </html>
