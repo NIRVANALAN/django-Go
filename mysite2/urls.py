@@ -21,8 +21,7 @@ import blog.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('blog/', views.blog_index),
-    path('test/', views.blog_index),
+    path('test/', views.archive),
     path('blog/', include(blog.urls))
     # path('github/',)
 ]

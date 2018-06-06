@@ -8,6 +8,9 @@ class BlogPost(models.Model):
     body = models.TextField()
     timestamp = models.DateTimeField()
 
+    class Meta:
+        ordering = ('-timestamp',)
+
 
 class DiaryPost(models.Model):
     title = models.CharField(max_length=30)
