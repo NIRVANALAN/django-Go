@@ -8,14 +8,16 @@
     <!-- BS core css-->
     <link rel="stylesheet" href="">
 </head>
-<body>
 <form action="/blog/create/" method="post">
-    Title:
-    <input type="text" name="title">
-    Body:
-    <textarea name="body" rows="3" cols="60"></textarea>
+    <span>{% csrf_token %}</span>
+    <table>{{ form }}</table>
+{#    Title:#}
+{#    <input type="text" name="title"><br>#}
+{#    Body:#}
+{#    <textarea name="body" rows="3" cols="60"></textarea><br>#}
     <input type="submit">
 </form>
+<body>
 <hr>
 {% for blog in  blog_list%}
 <h2 id="demo">{{ blog.title | title }}</h2>
