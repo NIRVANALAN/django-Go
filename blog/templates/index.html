@@ -9,20 +9,22 @@
     <link rel="stylesheet" href="">
 </head>
 <body>
-{% for blog in  blog_list%}
-<h2 id="demo">{{ blog.title }}</h2>
-    <h3>{{ blog.timestamp }}</h3>
+<form action="/blog/create/" method="post">
+    {% csrf_token %}
+    <table>{{ form }}</table>
+    <input type="submit">
+</form>
+<hr>
+{% for blog in  blog_list %}
+<h2 id="demo">{{ blog.title | title }}</h2>
+    <h3>{{ blog.timestamp | timesince }}</h3>
     <p>
     {{ blog.body }}
     </p>
+    <hr>
 {% endfor %}
-<h2 align="center">
-	<script>
-		function myFunction() {
-			var x=document.getElementById("demo");
-			aler
-        }
-	</script>
+<h2 align="center" name="end">
+    -----End-----
 </h2>
 </body>
 </html>

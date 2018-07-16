@@ -1,8 +1,9 @@
 from django.contrib import admin
-from blog.models import BlogPost
+from blog.models import *
 
 
 # Register your models here.
+
 
 class BlogPostAdmin(admin.ModelAdmin):
     list_display = ['title', 'body', 'timestamp']
@@ -10,3 +11,5 @@ class BlogPostAdmin(admin.ModelAdmin):
 
 # admin.register(BlogPost, BlogPostAdmin)
 admin.site.register(BlogPost, BlogPostAdmin)
+
+admin.site.register(DiaryPost, BlogPostAdmin)
