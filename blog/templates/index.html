@@ -8,22 +8,18 @@
     <!-- BS core css-->
     <link rel="stylesheet" href="">
 </head>
+<body>
 <form action="/blog/create/" method="post">
-    <span>{% csrf_token %}</span>
+    {% csrf_token %}
     <table>{{ form }}</table>
-{#    Title:#}
-{#    <input type="text" name="title"><br>#}
-{#    Body:#}
-{#    <textarea name="body" rows="3" cols="60"></textarea><br>#}
     <input type="submit">
 </form>
-<body>
 <hr>
-{% for blog in  blog_list%}
+{% for blog in  blog_list %}
 <h2 id="demo">{{ blog.title | title }}</h2>
     <h3>{{ blog.timestamp | timesince }}</h3>
     <p>
-    {{ blog.body  }}
+    {{ blog.body }}
     </p>
     <hr>
 {% endfor %}
