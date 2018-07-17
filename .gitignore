@@ -10,3 +10,4 @@ mysite2/__pycache__/wsgi.cpython-36.pyc
 
 blog/static/
 collected_static/
+Media/

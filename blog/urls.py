@@ -5,5 +5,6 @@ from django.urls import path
 urlpatterns = [
 	path('', blog_index),
 	path('create/', create_blog_post),
-	path('download/', file_down)
+	path('download/', file_down),
+	path('upload/', upload)
 ]

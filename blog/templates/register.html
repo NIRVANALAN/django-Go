@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload</title>
+</head>
+<body>
+<h2>Upload</h2>
+<form action="/blog/upload/" method="POST" enctype = 'multipart/form-data'>
+    {% csrf_token %}
+    <a href="/blog/download">Download</a>
+    <table>
+        {{ form }}
+    </table>
+    <p><input type="submit" value="OK"></p>
+</form>
+</body>
+</html>
