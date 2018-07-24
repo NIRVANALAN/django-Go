@@ -4,7 +4,7 @@ from django import forms
 
 # Create your models here.
 class Media(models.Model):
-	username = models.CharField(max_length=30, null=True)
+	username = models.CharField(max_length=30, null=False)
 	img = models.ImageField(upload_to='Media/img')
 	video = models.FileField(upload_to='Media/video')  # Not static file now
 	time = models.DateTimeField()

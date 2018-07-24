@@ -6,10 +6,17 @@ from blog.models import *
 
 
 class BlogPostAdmin(admin.ModelAdmin):
-    list_display = ['title', 'body', 'timestamp']
+	list_display = ['title', 'body', 'timestamp']
 
 
 # admin.register(BlogPost, BlogPostAdmin)
 admin.site.register(BlogPost, BlogPostAdmin)
 
 admin.site.register(DiaryPost, BlogPostAdmin)
+
+
+class MediaAdmin(admin.ModelAdmin):
+	list_display = ['username', 'img', 'video', 'time']
+
+
+admin.site.register(Media, MediaAdmin)

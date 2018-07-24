@@ -42,7 +42,7 @@ def upload(request):
 			# username = form.cleaned_data['user_name']
 			# head_img = form.cleaned_data['headImg']
 			Media(
-				username=request.FILES.get('username'),
+				username=request.POST.get('username'),
 				img=request.FILES.get('img'),
 				video=request.FILES.get('video'),
 				# django 里面上传文件默认只处理单个文件上传，批量上传的时候request.FILES 的类型
